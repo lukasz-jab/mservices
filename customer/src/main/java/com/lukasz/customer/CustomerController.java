@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("api/v1/customers")
-public class CustomerController {
+public record CustomerController() {
 
-    @PostMapping
-    public void registerCustomer(@RequestBody CustomerRequest customerRequest) {
-        log.info("new customer registration {} ", customerRequest);
-    }
+@PostMapping
+public void registerCustomer(@RequestBody CustomerRegistrationRequest customerRegistrationRequest) {
+        //log.info("new customer registration {} ", customerRequest);
+        }
 
 }
